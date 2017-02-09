@@ -1,0 +1,20 @@
+/**
+*变量：$符号，写在最外面表示全局变量，
+*可以通过&使用父选择器， &符号用法：当他定义在div{}这个块级作用域内时，表示的是div这个元素
+*/
+
+$color:#666;
+
+body{
+	background:$color;
+	div{
+		width: 200px;
+		height: 200px;
+		background:$color;
+		$color:green;
+		background:$color;
+		&:hover{
+			background:purple;
+		}
+	}
+}

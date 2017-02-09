@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+*
+*定义在模块内部的混合，在其他模块中是无法使用的
+*通常混合都定义全局作用域中
+*/
+/**
+*定义在全局作用域下的继承，在任何模块中都可以正确使用
+
+*定义yourstyle在box1内部时，box1内部的p可以正常继承，在外部的main中的p元素无法继承
+*定义多个otherstyle，继承时写在后面的会覆盖前面的，
+*
+*%	表示 %占位符
+	通过对继承元素名称前面我们可以添加一个占位符，这样编译的时候，不会输出
+*
+***/
+.box1, .main {
+  width: 200px;
+  height: 100px;
+  background: #333; }
+
+otherstyle, .main h1 {
+  color: blue;
+  width: 30px;
+  height: 30px;
+  background: red; }
+
+.box1 yourstyle, .box1 p {
+  width: 50px;
+  height: 50px;
+  background: green;
+  color: red; }
+
+.main {
+  margin-top: 30px; }
+  .main p {
+    color: #fff; }
+
+otherstyle, .main h1 {
+  border: 1px solid #fff;
+  width: 50px;
+  height: 50px;
+  background: green; }
+
+meiyongdao {
+  width: 100px;
+  height: 200px;
+  background: gray; }
+
+/*# sourceMappingURL=index.css.map */

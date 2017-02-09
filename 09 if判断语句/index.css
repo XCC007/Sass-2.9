@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+*
+*
+*
+*/
+/**
+ * $dir 表示方向
+ * $w   表示宽度
+ * $c   表示颜色
+ */
+div {
+  border: 50px solid transparent;
+  border-top-width: 100px;
+  border-bottom-width: 100px;
+  border-left: 50px solid purple;
+  width: 0;
+  font-size: 0; }
+
+span {
+  border: 10px solid transparent;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  border-bottom: 10px solid green;
+  width: 0;
+  font-size: 0; }
+
+/*# sourceMappingURL=index.css.map */

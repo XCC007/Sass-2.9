@@ -1,0 +1,32 @@
+/**
+*Sass支持多参数传递，通过：... 语法可以获取参数中后面所有的参数
+（在less中获取所有参数用@aruguments）
+...语法是获取该变量后面所有的变量，前面的变量我们可以正常使用
+*
+*/
+
+// 我们可以定义一个box-shadow混合，来定义兼容多个浏览器的样式
+@mixin box-shadow ($h, $bs...) {
+	height: $h;
+	// chrome浏览器
+	-webkit-box-shadow: $bs;
+	// opera浏览器
+	-o-box-shadow: $bs;
+	// firefox浏览器
+	-moz-box-shadow: $bs;
+	// ie高级浏览器
+	-ms-box-shadow: $bs;
+	// 默认
+	box-shadow: $bs;
+
+}
+
+// 定义div的样式
+div {
+	height: 200px;
+	width: 500px;
+	background: green;
+	margin: 100px auto;
+	// 我们想设置div的box-shadow，它是一个css3属性，所以我们要添加浏览器前缀
+	@include box-shadow(100px, 2px 4px red, 5px 6px green, 8px 9px blue);
+}

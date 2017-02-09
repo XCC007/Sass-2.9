@@ -1,0 +1,13 @@
+div {
+  height: 200px;
+  width: 500px;
+  background: green;
+  margin: 100px auto;
+  height: 100px;
+  -webkit-box-shadow: 2px 4px red, 5px 6px green, 8px 9px blue;
+  -o-box-shadow: 2px 4px red, 5px 6px green, 8px 9px blue;
+  -moz-box-shadow: 2px 4px red, 5px 6px green, 8px 9px blue;
+  -ms-box-shadow: 2px 4px red, 5px 6px green, 8px 9px blue;
+  box-shadow: 2px 4px red, 5px 6px green, 8px 9px blue; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,33 @@
+/**
+*Sass支持for循环，跟js的for循环有些差别
+	Sass循环语法 @for $i from start through end
+	Start 是$i的起始值（包含的）
+	End 是$i的终止值 （包含的）
+* $ i 表示：起始值到终止值：1--20 的数字。
+* .item - # { $ i } 表示：item1 到 item20 
+*/
+
+div {
+	height: 20px;
+	margin-top: 5px;
+}
+// 循环div，为每一个div添加一种背景色
+$color:#110;
+$colorHover:#123;
+
+@for $i from 1 through 20 {
+		// 为每一个div添加背景色
+	.item-#{$i} {
+		background:$color*$i;
+		&:hover {
+			background:$colorHover * $i;
+		}
+	}
+}
+
+
+
+
+
+
+//命令行：  		Sass index.scss index.css

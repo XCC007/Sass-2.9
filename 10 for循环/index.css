@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/**
+*Sass支持for循环，跟js的for循环有些差别
+	Sass循环语法 @for $i from start through end
+	Start 是$i的起始值（包含的）
+	End 是$i的终止值 （包含的）
+* $ i 表示：起始值到终止值：1--20 的数字。
+* .item - # { $ i } 表示：item1 到 item20 
+*/
+div {
+  height: 20px;
+  margin-top: 5px; }
+
+.item-1 {
+  background: #111100; }
+  .item-1:hover {
+    background: #112233; }
+
+.item-2 {
+  background: #222200; }
+  .item-2:hover {
+    background: #224466; }
+
+.item-3 {
+  background: #333300; }
+  .item-3:hover {
+    background: #336699; }
+
+.item-4 {
+  background: #444400; }
+  .item-4:hover {
+    background: #4488cc; }
+
+.item-5 {
+  background: #555500; }
+  .item-5:hover {
+    background: #55aaff; }
+
+.item-6 {
+  background: #666600; }
+  .item-6:hover {
+    background: #66ccff; }
+
+.item-7 {
+  background: #777700; }
+  .item-7:hover {
+    background: #77eeff; }
+
+.item-8 {
+  background: #888800; }
+  .item-8:hover {
+    background: #88ffff; }
+
+.item-9 {
+  background: #999900; }
+  .item-9:hover {
+    background: #99ffff; }
+
+.item-10 {
+  background: #aaaa00; }
+  .item-10:hover {
+    background: #aaffff; }
+
+.item-11 {
+  background: #bbbb00; }
+  .item-11:hover {
+    background: #bbffff; }
+
+.item-12 {
+  background: #cccc00; }
+  .item-12:hover {
+    background: #ccffff; }
+
+.item-13 {
+  background: #dddd00; }
+  .item-13:hover {
+    background: #ddffff; }
+
+.item-14 {
+  background: #eeee00; }
+  .item-14:hover {
+    background: #eeffff; }
+
+.item-15 {
+  background: yellow; }
+  .item-15:hover {
+    background: white; }
+
+.item-16 {
+  background: yellow; }
+  .item-16:hover {
+    background: white; }
+
+.item-17 {
+  background: yellow; }
+  .item-17:hover {
+    background: white; }
+
+.item-18 {
+  background: yellow; }
+  .item-18:hover {
+    background: white; }
+
+.item-19 {
+  background: yellow; }
+  .item-19:hover {
+    background: white; }
+
+.item-20 {
+  background: yellow; }
+  .item-20:hover {
+    background: white; }
+
+/*# sourceMappingURL=index.css.map */

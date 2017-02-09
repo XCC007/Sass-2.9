@@ -1,0 +1,32 @@
+/**
+*Sass支持插值 ，
+*	插值通常对属性名称进行操作
+*
+*
+*/
+
+// 抽象混合，箭头方向，箭头大小，箭头颜色是需要提取的，因此作为变量
+/**
+ * $dir 表示方向
+ * $w   表示宽度
+ * $c   表示颜色
+ */
+@mixin arrow($dir:top,$w:30px,$c:orange) {
+	border:$w solid transparent;
+		// 设置特殊的边
+	border-#{$dir}: $w solid $c; 
+	// 兼容块元素
+	width: 0;
+	// 兼容行内元素
+	font-size: 0;
+}
+div{
+	margin-top:20px;
+	@include arrow(left,50px,purple);
+}
+span{
+	margin-top:100px;
+	@include arrow;
+}
+
+//命令行：  		Sass index.scss index.css

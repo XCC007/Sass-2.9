@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/**
+*While循环
+	Sass支持while循环
+	 	语法 @while 判断条件 {
+			更改判断条件
+	}
+*
+*
+*/
+div {
+  height: 20px;
+  margin-top: 5px;
+  background: gray; }
+
+.col-lg-1 {
+  width: 8.33333%;
+  background: purple; }
+  .col-lg-1:hover {
+    background: #bbbbbb; }
+
+.col-lg-2 {
+  width: 16.66667%;
+  background: orange; }
+  .col-lg-2:hover {
+    background: #222222; }
+
+.col-lg-3 {
+  width: 25%;
+  background: purple; }
+  .col-lg-3:hover {
+    background: #999999; }
+
+.col-lg-4 {
+  width: 33.33333%;
+  background: orange; }
+  .col-lg-4:hover {
+    background: #444444; }
+
+.col-lg-5 {
+  width: 41.66667%;
+  background: purple; }
+  .col-lg-5:hover {
+    background: #777777; }
+
+.col-lg-6 {
+  width: 50%;
+  background: orange; }
+  .col-lg-6:hover {
+    background: #666666; }
+
+.col-lg-7 {
+  width: 58.33333%;
+  background: purple; }
+  .col-lg-7:hover {
+    background: #555555; }
+
+.col-lg-8 {
+  width: 66.66667%;
+  background: orange; }
+  .col-lg-8:hover {
+    background: #888888; }
+
+.col-lg-9 {
+  width: 75%;
+  background: purple; }
+  .col-lg-9:hover {
+    background: #333333; }
+
+.col-lg-10 {
+  width: 83.33333%;
+  background: orange; }
+  .col-lg-10:hover {
+    background: #aaaaaa; }
+
+.col-lg-11 {
+  width: 91.66667%;
+  background: purple; }
+  .col-lg-11:hover {
+    background: #111111; }
+
+.col-lg-12 {
+  width: 100%;
+  background: orange; }
+  .col-lg-12:hover {
+    background: #cccccc; }
+
+/**
+*三元表达式
+		Js中三元表达式 ？ ：
+		在sass中我们通过 if（condition， truevalue， falsevalue）
+		If实现的原理，相当于sass中方法
+		变量支持布尔值
+*
+*
+*
+***/
+h1 {
+  color: red; }
+
+/*# sourceMappingURL=index.css.map */

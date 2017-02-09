@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/**
+*1、混合：定义时用@mixin name,调用时用@include name。
+* 混合相当于函数方法，定义一组样式(navStyle)，多个元素（box1,box2,box3）可以共用
+*
+*
+*2、混合的传参：
+*/
+.box1 .nav {
+  height: 30px;
+  border-top: 2px solid skyblue;
+  line-height: 30px;
+  width: 800px; }
+  .box1 .nav:hover {
+    background: pink; }
+  .box1 .nav a {
+    font-weight: bold;
+    color: red;
+    font-size: 14px;
+    padding: 0 5px;
+    text-decoration: none; }
+    .box1 .nav a:hover {
+      text-decoration: underline;
+      color: purple; }
+  .box1 .nav span {
+    color: skyblue; }
+
+.box2 {
+  margin-top: 30px; }
+  .box2 .nav {
+    height: 30px;
+    border-top: 2px solid skyblue;
+    line-height: 30px;
+    width: 1000px; }
+    .box2 .nav:hover {
+      background: green; }
+    .box2 .nav a {
+      font-weight: bold;
+      color: orange;
+      font-size: 14px;
+      padding: 0 5px;
+      text-decoration: none; }
+      .box2 .nav a:hover {
+        text-decoration: underline;
+        color: purple; }
+    .box2 .nav span {
+      color: skyblue; }
+
+.box3 {
+  margin-top: 30px; }
+  .box3 .nav {
+    height: 30px;
+    border-top: 2px solid skyblue;
+    line-height: 30px;
+    width: 700px; }
+    .box3 .nav:hover {
+      background: #f7fafd; }
+    .box3 .nav a {
+      font-weight: bold;
+      color: skyblue;
+      font-size: 14px;
+      padding: 0 5px;
+      text-decoration: none; }
+      .box3 .nav a:hover {
+        text-decoration: underline;
+        color: purple; }
+    .box3 .nav span {
+      color: skyblue; }
+
+/*# sourceMappingURL=index.css.map */

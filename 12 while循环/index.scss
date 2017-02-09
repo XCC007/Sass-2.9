@@ -1,0 +1,49 @@
+/**
+*While循环
+	Sass支持while循环
+	 	语法 @while 判断条件 {
+			更改判断条件
+	}
+*
+*
+*/
+div {
+	height: 20px;
+	margin-top: 5px;
+	background: gray;
+}
+
+// 定义起始变量
+$i: 1;
+$color:#111;
+@while $i <= 12 {
+	.col-lg-#{$i} {
+		width: 100% / 12 * $i;
+		background:if($i % 2 == 0, orange,purple);
+		&:hover {
+			background:if($i % 2 == 0, $color * $i ,$color * (12 - $i));
+		}
+	}
+	// 更改循环变量
+	$i: $i + 1;
+}
+
+// 设置h1字体颜色
+/**
+*三元表达式
+		Js中三元表达式 ？ ：
+		在sass中我们通过 if（condition， truevalue， falsevalue）
+		If实现的原理，相当于sass中方法
+		变量支持布尔值
+*
+*
+*
+***/
+$a: 10;
+$b: true;
+h1 {
+	// color: if($a > 20, red , green);
+	color: if($b, red , green);
+}
+
+//命令行：  		Sass index.scss index.css

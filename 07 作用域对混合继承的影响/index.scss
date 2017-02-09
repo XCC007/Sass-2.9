@@ -1,0 +1,104 @@
+/**
+*
+*定义在模块内部的混合，在其他模块中是无法使用的
+*通常混合都定义全局作用域中
+*/
+
+// //1、作用域对混合的影响：
+// // 定义混合
+// @mixin myStyle($color:#ccc){
+// 	width:200px;
+// 	height:100px;
+// 	background:$color;
+// 	//定义在模块内部的混合，在其他模块中是无法使用的
+// 	// 通常混合都定义全局作用域中
+// 	// .box1{
+// 	// 	@mixin myStyle{
+// 	// 		width: 500px;
+// 	// 		height: 500px;
+// 	// 		background:orange;
+// 	// 	}
+// 	// }
+// }
+// //在main中无法使用box1中的myStyle
+// // .main{
+// // 	@include .box1 myStyle;
+// // }
+
+// .box1{
+// 	@include myStyle(orange);
+// }
+// .main{
+// 	margin-top:30px;
+// 	@include myStyle;
+// }
+
+
+//==========2、作用域对继承的影响===
+/**
+*定义在全局作用域下的继承，在任何模块中都可以正确使用
+
+*定义yourstyle在box1内部时，box1内部的p可以正常继承，在外部的main中的p元素无法继承
+*定义多个otherstyle，继承时写在后面的会覆盖前面的，
+*
+*%	表示 %占位符
+	通过对继承元素名称前面我们可以添加一个占位符，这样编译的时候，不会输出
+*   如果没有用到：meiyongdao这个继承，不加%，编译时会输出，
+*   			  %jiale 加了%的，编译时就不会输出
+**/
+// 定义一个继承
+%myStyle{
+	width:200px;
+	height:100px;
+	background:#333;
+}
+otherstyle {
+	color: blue;
+	width:30px;
+	height:30px;
+	background:red;
+}
+.box1{
+	yourstyle {
+		width: 50px;
+		height: 50px;
+		background: green;
+		color: red;
+	}
+	@extend %myStyle;
+	p{
+		@extend yourstyle;
+	}
+}
+
+.main{
+	margin-top:30px;
+	@extend %myStyle;
+	h1{
+		@extend otherstyle;
+	}
+	//无法使用box1内的：yourstyle
+	p{
+		color: #fff;
+		@extend yourstyle;
+	}
+}
+
+otherstyle {
+	border: 1px solid #fff;
+	width:50px;
+	height:50px;
+	background:green;
+}
+//没有用到的样式，不加%,编译时会输出
+meiyongdao{
+	width:100px;
+	height:200px;
+	background:gray;
+}
+//没有用到的样式，加%,编译时不会输出
+%jiale{
+	width:100px;
+	height:200px;
+	background:gray;
+}

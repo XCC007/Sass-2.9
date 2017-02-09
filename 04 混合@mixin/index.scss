@@ -1,0 +1,53 @@
+
+/**
+*1、混合：定义时用@mixin name,调用时用@include name。
+* 混合相当于函数方法，定义一组样式(navStyle)，多个元素（box1,box2,box3）可以共用
+*
+*
+*2、混合的传参：在navStyle(),后加上括号($width:700px,$name:key)传参,
+*		调用样式方法时：@include name(key1,key2)
+*/
+
+
+@mixin navStyle($width: 700px, $color: skyblue, $bg: #f7fafd) {
+	height: 30px;
+	border-top: 2px solid skyblue;
+	line-height: 30px;
+	width:$width;
+	&:hover {
+		background:$bg;
+	}
+	a {
+		font-weight: bold;
+		color:$color;
+		font-size: 14px;
+		padding: 0 5px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			color:purple;
+		}
+	}
+	span {
+		color: skyblue;
+	}
+}
+
+.box1{
+	.nav{
+		@include navStyle(800px,red,pink);
+	}
+}
+
+.box2{
+	margin-top:30px;
+	.nav{
+		@include navStyle(1000px,orange,green);
+	}
+}
+.box3{
+	margin-top:30px;
+	.nav{
+		@include navStyle;
+	}
+}

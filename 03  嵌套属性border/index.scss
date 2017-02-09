@@ -1,0 +1,25 @@
+/**
+*为div设置border边框属性，就是可以拆分出来写，嵌套在div元素内部
+*
+******/ 
+
+body{
+	background:#ccc;
+	div{
+		width: 200px;
+		height: 200px;
+		background:orange;
+		margin:100px;
+		border:{
+			style:solid;
+			top:{
+				width: 5px;
+				color:red;
+			}
+			left: {
+				width: 10px;
+				color: black;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/**
+*继承：@extend 父元素;
+*  在子元素内引入(继承)父元素样式
+*  p{@extend 父元素}
+*/
+div, p {
+  width: 200px; }
+
+.app, p {
+  height: 200px;
+  background: #666; }
+
+#demo, p {
+  border: 2px solid green; }
+
+p {
+  color: orange; }
+
+/*# sourceMappingURL=index.css.map */

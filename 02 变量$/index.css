@@ -1,0 +1,11 @@
+body {
+  background: #666; }
+  body div {
+    width: 200px;
+    height: 200px;
+    background: #666;
+    background: green; }
+    body div:hover {
+      background: purple; }
+
+/*# sourceMappingURL=index.css.map */

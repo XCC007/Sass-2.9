@@ -1,0 +1,24 @@
+/**
+*
+*
+*
+*/
+div{
+	height:20px;
+	margin-top:5px;
+	background:gray;
+}
+// 循环div，设置每一个div的宽度
+@for $i from 1 through 12 {
+	.col-lg-#{$i},
+	.col-xs-#{$i},
+	.col-md-#{$i} {
+		width: 100% / 12 * $i;
+	}
+		// 设置偏移样式
+	.col-lg-offset-#{$i} {
+		margin-left: 100% / 12 * $i;
+	}
+}
+
+//命令行：  		Sass index.scss index.css
